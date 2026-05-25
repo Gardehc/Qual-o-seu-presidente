@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Descubra seu Pré-candidato a presidência</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="container">
+    <h1>Descubra seu Pré-candidato a presidência</h1>
+    <p class="subtitle">Escolha 3 temas para revelar seu pré-candidato ideal.</p>
+
+    <section class="status">
+      <p><strong>Escolhas:</strong> <span id="contador">0</span>/3</p>
+    </section>
+
+    <section class="jogo-layout">
+      <section class="temas-coluna" id="temas-esquerda"></section>
+
+      <section class="cartas-centro" id="cartas">
+        <div class="carta" id="carta-1">
+          <div class="foto">❓</div>
+          <p><span>0</span></p>
+        </div>
+        <div class="carta" id="carta-2">
+          <div class="foto">❓</div>
+          <p><span>0</span></p>
+        </div>
+        <div class="carta" id="carta-3">
+          <div class="foto">❓</div>
+          <p><span>0</span></p>
+        </div>
+      </section>
+
+      <section class="temas-coluna" id="temas-direita"></section>
+    </section>
+
+    <section class="resultado" id="resultado"></section>
+
+    <button id="reiniciar" class="btn-reiniciar" hidden>Jogar novamente</button>
+  </main>
+
+  <div id="video-modal" class="modal" hidden>
+    <div class="modal-backdrop" data-close-modal="true"></div>
+    <div class="modal-content" role="dialog" aria-modal="true" aria-label="Vídeo do tema">
+      <button id="fechar-modal" class="modal-close" type="button">Fechar</button>
+      <div class="modal-media" id="modal-media"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
