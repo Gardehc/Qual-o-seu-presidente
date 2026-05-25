@@ -67,6 +67,7 @@ h1 {
   border-radius: 12px;
   padding: 10px;
   width: 150px;
+  min-width: 0;
   text-align: center;
   transition: transform 0.35s ease, box-shadow 0.35s ease, flex-basis 0.35s ease;
 }
@@ -264,12 +265,49 @@ h1 {
 
   .cartas-centro.resultado-ativo .carta.vencedora,
   .cartas-centro.resultado-ativo .carta.nao-vencedora {
-    flex: 0 0 100%;
+    flex: 0 0 calc(50% - 8px);
+    max-width: calc(50% - 8px);
+  }
+
+  .cartas-centro.resultado-ativo .carta.vencedora {
+    flex-basis: 100%;
     max-width: 100%;
   }
 
-  .cartas-centro.resultado-ativo .carta.vencedora .foto,
+  .cartas-centro.resultado-ativo .carta.vencedora .foto {
+    width: min(76vw, 260px);
+    height: auto;
+    aspect-ratio: 3 / 4;
+  }
+
   .cartas-centro.resultado-ativo .carta.nao-vencedora .foto {
-    height: 240px;
+    width: min(40vw, 150px);
+    height: auto;
+    aspect-ratio: 3 / 4;
+  }
+}
+
+@media (max-width: 520px) {
+  .container {
+    padding: 14px;
+  }
+
+  .cartas-centro {
+    gap: 10px;
+  }
+
+  .carta {
+    padding: 8px;
+  }
+
+  .foto {
+    width: min(42vw, 140px);
+    height: auto;
+    aspect-ratio: 3 / 4;
+  }
+
+  .cartas-centro.resultado-ativo .carta.nao-vencedora {
+    flex: 0 0 calc(50% - 6px);
+    max-width: calc(50% - 6px);
   }
 }
